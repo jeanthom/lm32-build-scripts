@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt install build-essential autoconf
+apt install build-essential autoconf texinfo
 
 GMP=gmp-6.1.2
 MPFR=mpfr-3.1.5
