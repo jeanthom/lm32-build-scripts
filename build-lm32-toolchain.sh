@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt install build-essential autoconf texinfo
+apt -y install build-essential autoconf texinfo
 
 GMP=gmp-6.1.2
 MPFR=mpfr-3.1.5
@@ -65,5 +65,8 @@ ln -s ../${GMP} gmp
 cd ..
 mkdir -p build
 cd build
-../${GCC}/configure  --prefix=/opt/lm32 --enable-languages=c --target=lm32-elf
-make -j32
+../${GCC}/configure  --prefix=/opt/lm32 --enable-languages="c,c++" --target=lm32-elf
+make -j32 all
+make install
+cd /opt/
+tar czvf lm32-toolchain.tar.gz lm32/
