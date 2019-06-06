@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt install build-essential autocon
+apt install build-essential autoconf
 
 GMP=gmp-6.1.2
 MPFR=mpfr-3.1.5
