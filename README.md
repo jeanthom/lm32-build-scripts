@@ -4,7 +4,7 @@ Used to build a cross compiling toolchain for lm32 and LiteX/MiSoC development.
 
 ## Instructions
 
-I use a GP1-L instance from [Scaleway](https://www.scaleway.com) (32 vCPUs, 128GB RAM, x86_64) running Ubuntu Xenial (16.04). You should be able to do the same on any other cloud provider or on a local computer (altough I highly recommend running it at least in a VM). If you're using cheaper instances with lower vCPU count, you'll need to tweak the build script (`-j` parameter on the make command).
+I use a GP1-L instance from [Scaleway](https://www.scaleway.com) (32 vCPUs, 128GB RAM, x86_64) running Ubuntu Xenial (16.04). You should be able to do the same on any other cloud provider or on a local computer (although I highly recommend running it at least in a VM). If you're using cheaper instances with lower vCPU count, you'll need to tweak the build script (`-j` parameter on the make command).
 
 ```
 screen # in case you loose connection to your instance
