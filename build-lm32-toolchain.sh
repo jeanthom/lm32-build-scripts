@@ -3,7 +3,7 @@
 set -e
 
 apt update
-apt -y install build-essential autoconf texinfo
+apt -y install screen wget ca-certificates build-essential autoconf texinfo
 
 GMP=gmp-6.1.2
 MPFR=mpfr-3.1.5
