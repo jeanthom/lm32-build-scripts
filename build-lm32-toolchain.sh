@@ -2,6 +2,9 @@
 
 set -e
 
+apt update
+apt install build-essential autocon
+
 GMP=gmp-6.1.2
 MPFR=mpfr-3.1.5
 MPC=mpc-1.0.3
@@ -26,9 +29,9 @@ wget -N $GNU_MIRROR/gnu/mpc/${MPC}.tar.gz
 tar xf ${MPC}.tar.gz
 
 # gcc
-
 wget -N $GNU_MIRROR/gnu/gcc/${GCC}/${GCC}.tar.bz2
 tar xf ${GCC}.tar.bz2
+sed -i 's/xloc.file[0] = '\0'/xloc.file[0] == '\0'/g' gcc-6.3.0/gcc/ubsan.c
 
 # newlib
 wget -N ftp://sourceware.org/pub/newlib/${NEWLIB}.tar.gz
